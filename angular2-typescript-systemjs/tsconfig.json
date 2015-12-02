@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "noLib": false,
+    "outDir": "./src/js",
+    "removeComments": true,
+    "target": "es5"
+  },
+  "exclude": [
+    "node_modules",
+    "jspm_packages"
+  ],
+  "filesGlob": [
+    "./src/ts/**/*.ts"
+  ],
+  "files": [
+    "./src/ts/Application.ts",
+    "./src/ts/Loader.ts",
+    "./src/ts/MainComponent.ts",
+    "./src/ts/SubComponent.ts"
+  ],
+  "atom": {
+    "rewriteTsconfig": true
+  }
+}

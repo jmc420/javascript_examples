@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Angular2 example</title>
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+    <script>
+      System.import("reflect-metadata").then(function() {
+        System.import("zone.js").then(function() {
+          System.import("./src/js/Loader.js");
+        });
+      });
+    </script>
+  </head>
+
+<body>
+  <my-app/>
+</body>
+
+</html>
