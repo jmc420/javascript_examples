@@ -16,7 +16,6 @@ npm run start compiles the typescript files and starts a live server session.
 
 npm run start-prod compile the app and creates a bundle in the build directory using jspm bundle command.
 
-
 ##TODO
 
 Get es6 typescript target to work.

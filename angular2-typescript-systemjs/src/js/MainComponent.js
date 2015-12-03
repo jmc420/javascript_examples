@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var angular2_1 = require('angular2/angular2');
 var SubComponent_1 = require('./SubComponent');
-var template = require("src/html/main.html!text");
+var template = require("main-html");
 var MainComponent = (function () {
     function MainComponent() {
         console.log("Application starting");

@@ -1,11 +1,13 @@
 /// <reference path="../../typings/angular2/angular2.d.ts" />
+/// <reference path="../html/main.d.ts" />
 
 import {Component} from 'angular2/angular2';
 import SubComponent from './SubComponent';
+import * as template from "main-html"; 
 
-declare var require;
+//declare var require;
 
-var template = require("src/html/main.html!text");
+//var template = require("src/html/main.html!text");
 
 @Component({
     selector: 'my-app',

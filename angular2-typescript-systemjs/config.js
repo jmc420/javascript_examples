@@ -13,7 +13,14 @@ System.config({
     "npm:*": "jspm_packages/npm/*"
   },
 
+  meta: {
+    'main-html': {
+      loader: 'text'
+    }
+  },
+
   map: {
+    "main-html": "src/html/main.html",
     "angular2": "npm:angular2@2.0.0-alpha.46",
     "babel": "npm:babel-core@5.8.34",
     "babel-runtime": "npm:babel-runtime@5.8.34",
