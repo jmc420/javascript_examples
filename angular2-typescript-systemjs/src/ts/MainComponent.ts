@@ -3,7 +3,7 @@
 
 import {Component} from 'angular2/angular2';
 import SubComponent from './SubComponent';
-import * as template from "main-html"; 
+import * as template from "main-html";
 
 //declare var require;
 
@@ -19,7 +19,7 @@ export default class MainComponent {
     private greeting:string;
 
     constructor() {
-        console.log("Application starting");
+        console.log("Main Component starting");
         this.greeting = "Hello";
     }
 }

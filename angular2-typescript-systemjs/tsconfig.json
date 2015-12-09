@@ -25,6 +25,6 @@
     "./src/ts/SubComponent.ts"
   ],
   "atom": {
-    "rewriteTsconfig": true
+    "rewriteTsconfig": false
   }
 }

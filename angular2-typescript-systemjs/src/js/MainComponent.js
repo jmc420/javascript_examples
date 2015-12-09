@@ -12,7 +12,7 @@ var SubComponent_1 = require('./SubComponent');
 var template = require("main-html");
 var MainComponent = (function () {
     function MainComponent() {
-        console.log("Application starting");
+        console.log("Main Component starting");
         this.greeting = "Hello";
     }
     MainComponent = __decorate([
