@@ -707,7 +707,7 @@ $__System.registerDynamic("6", ["7", "5"], true, function($__require, exports, m
       return Reflect.metadata(k, v);
   };
   var angular2_1 = $__require('7');
-  var template = $__require('5');
+  var html = $__require('5');
   var SubComponent = (function() {
     function SubComponent() {
       console.log("Sub Component starting");
@@ -715,7 +715,7 @@ $__System.registerDynamic("6", ["7", "5"], true, function($__require, exports, m
     }
     SubComponent = __decorate([angular2_1.Component({
       selector: 'my-component',
-      template: template
+      template: html
     }), __metadata('design:paramtypes', [])], SubComponent);
     return SubComponent;
   })();
@@ -748,7 +748,7 @@ $__System.registerDynamic("8", ["7", "6", "4"], true, function($__require, expor
   };
   var angular2_1 = $__require('7');
   var SubComponent_1 = $__require('6');
-  var template = $__require('4');
+  var html = $__require('4');
   var MainComponent = (function() {
     function MainComponent() {
       console.log("Main Component starting");
@@ -756,7 +756,7 @@ $__System.registerDynamic("8", ["7", "6", "4"], true, function($__require, expor
     }
     MainComponent = __decorate([angular2_1.Component({
       selector: 'my-app',
-      template: template,
+      template: html,
       directives: [SubComponent_1.default]
     }), __metadata('design:paramtypes', [])], MainComponent);
     return MainComponent;

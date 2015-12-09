@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var angular2_1 = require('angular2/angular2');
 var SubComponent_1 = require('./SubComponent');
-var template = require("main-html");
+var html = require("main-html");
 var MainComponent = (function () {
     function MainComponent() {
         console.log("Main Component starting");
@@ -18,7 +18,7 @@ var MainComponent = (function () {
     MainComponent = __decorate([
         angular2_1.Component({
             selector: 'my-app',
-            template: template,
+            template: html,
             directives: [SubComponent_1.default]
         }), 
         __metadata('design:paramtypes', [])

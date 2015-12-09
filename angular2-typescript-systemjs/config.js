@@ -14,21 +14,23 @@ System.config({
   },
 
   packages: {
-    'src/html': {
-      defaultExtension: false,
-      meta: {
-        '*.html': { loader: 'text' }
+    "src/html": {
+      "defaultExtension": false,
+      "meta": {
+        "*.html": {
+          "loader": "text"
+        }
       }
     }
   },
 
   map: {
-    "component-html": "src/html/component.html",
-    "main-html": "src/html/main.html",
     "angular2": "npm:angular2@2.0.0-alpha.46",
     "babel": "npm:babel-core@5.8.34",
     "babel-runtime": "npm:babel-runtime@5.8.34",
+    "component-html": "src/html/component.html",
     "core-js": "npm:core-js@1.2.6",
+    "main-html": "src/html/main.html",
     "reflect-metadata": "npm:reflect-metadata@0.1.2",
     "text": "github:systemjs/plugin-text@0.0.3",
     "zone.js": "npm:zone.js@0.5.8",

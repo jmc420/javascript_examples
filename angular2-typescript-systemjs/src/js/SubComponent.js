@@ -8,7 +8,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
-var template = require("component-html");
+var html = require("component-html");
 var SubComponent = (function () {
     function SubComponent() {
         console.log("Sub Component starting");
@@ -17,7 +17,7 @@ var SubComponent = (function () {
     SubComponent = __decorate([
         angular2_1.Component({
             selector: 'my-component',
-            template: template,
+            template: html,
         }), 
         __metadata('design:paramtypes', [])
     ], SubComponent);

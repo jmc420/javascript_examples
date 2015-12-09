@@ -3,7 +3,7 @@
 
 import {Component} from 'angular2/angular2';
 import SubComponent from './SubComponent';
-import * as template from "main-html";
+import * as html from "main-html";
 
 //declare var require;
 
@@ -11,7 +11,7 @@ import * as template from "main-html";
 
 @Component({
     selector: 'my-app',
-    template: template,
+    template: html,
     //template: "<h2>{{greeting}} from my First Angular2 application</h2> <my-component/>",
     directives: [SubComponent]
 })
