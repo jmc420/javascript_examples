@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "noLib": false,
+    "outDir": "./src/js",
+    "removeComments": true,
+    "target": "es5"
+  },
+  "exclude": [
+    "node_modules",
+    "typings"
+  ],
+  "files": [
+    "./src/ts/ElectronBrowserApplication.ts",
+    "./src/ts/ElectronBrowserRpc.ts",
+    "./src/ts/ElectronServerApplication.ts",
+    "./src/ts/ElectronServerRpc.ts"
+  ],
+  "atom": {
+    "rewriteTsconfig": false
+  }
+}
