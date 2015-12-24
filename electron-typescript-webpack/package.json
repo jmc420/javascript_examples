@@ -7,20 +7,20 @@
     "electron-prebuilt": "^0.35.1",
     "tsd": "^0.6.5",
     "typescript": "1.7.3",
-    "webpack": "^1.12.9"
+    "webpack": "^2.0.2-beta"
   },
   "engines": {
     "node": ">=5.0.0"
   },
   "scripts": {
     "build":"npm run build-client && npm run build-server",
-    "build-client": "webpack --config webpack-client.config.js",
-    "build-server": "webpack --config webpack-server.config.js",
+    "build-client": "webpack -p --config webpack-client.config.js",
+    "build-server": "webpack -p --config webpack-server.config.js",
     "clean": "rm -fr ./node_modules ./src/js/*",
     "compile": "tsc",
     "postinstall": "tsd install && npm run compile && npm run build",
-    "start": "./node_modules/.bin/electron ./src/js/ElectronServerApplication.js",
-    "start-prod": "./node_modules/.bin/electron ./build/server-bundle.js",
+    "start": "./node_modules/.bin/electron ./src/js/ElectronServerApplication.js index.html",
+    "start-prod": "./node_modules/.bin/electron ./build/server-bundle.js index-bundle.html",
     "test": "echo no tests"
   }
 }

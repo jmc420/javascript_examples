@@ -6,6 +6,7 @@
 import ElectronServerRpc from './ElectronServerRpc';
 
 var app = require('app');
+var path = require('path');
 var BrowserWindow = require('browser-window');
 
 export default class ElectronServerApplication {
@@ -16,19 +17,26 @@ export default class ElectronServerApplication {
     var self = this;
 
     console.log("ElectronApplication starting up ");
-    app.on('ready', function() {
-      self.openBrowser();
-    });
-    app.on('window-all-closed', function() {
-      self.quit();
-    });
+
+    if (process.argv.length != 3) {
+      console.log("script and index file expected");
+    }
+    else {
+      app.on('ready', function() {
+        self.openBrowser(process.argv[2]);
+      });
+      app.on('window-all-closed', function() {
+        self.quit();
+      });
+    }
+
   }
 
-  private openBrowser() {
-    var fileName: string = __dirname + '/../../index.html';
+  private openBrowser(htmlFileName:string) {
+    var fileName:string = path.resolve() + "/" + htmlFileName;
     var self = this;
 
-    console.log("open window" + fileName);
+    console.log("open window " + fileName);
     this.window = new BrowserWindow({ width: 800, height: 600, title: "WifiChat" });
     this.window.loadURL('file://' + fileName);
     this.window.webContents.openDevTools();

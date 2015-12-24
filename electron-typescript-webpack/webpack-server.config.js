@@ -4,9 +4,6 @@ module.exports = {
         path: "./build",
         filename: "server-bundle.js"
     },
-    externals: {
-      "electron": "electron"
-    },
     target: "atom",
     module: {
         loaders: [

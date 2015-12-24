@@ -6,8 +6,6 @@ export default class ElectronServerRpc {
   protected browser: any;
 
   constructor(browser: any) {
-    var self = this;
-
     console.log("ServerRpc starting up");
     this.browser = browser;
     ipcMain.on(EventConstant.IPC_EVENT, function(event, message:string) {

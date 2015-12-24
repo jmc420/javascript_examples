@@ -4,10 +4,7 @@ module.exports = {
         path: "./build",
         filename: "client-bundle.js"
     },
-    externals: {
-      "electron": "electron"
-    },
-    "target": "atom",
+    target: "atom",
     module: {
         loaders: [
             { test: /\.css$/, loader: "style!css" }
