@@ -3,9 +3,12 @@
   "main": "server-bundle.js",
   "version": "1.0.0",
   "dependencies": {
-    "electron-builder": "^2.5.0"
+    "jquery": "^2.1.4",
+    "react": "^0.14.3",
+    "react-bootstrap": "^0.28.1"
   },
   "devDependencies": {
+    "electron-builder": "^2.5.0",
     "electron-packager": "^5.2.0",
     "electron-prebuilt": "^0.35.1",
     "tsd": "^0.6.5",
