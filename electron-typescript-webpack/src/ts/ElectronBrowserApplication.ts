@@ -12,13 +12,11 @@ export default class ElectronBrowserApplication {
   protected element:React.ReactElement<{}>;
 
   constructor() {
-    var container:Element = document.getElementById("container");
-
     console.log("BrowserApplication starting up");
 
     this.element = React.createElement(View);
 
-    ReactDOM.render(this.element, container);
+    ReactDOM.render(this.element, document.body);
   }
 
 }

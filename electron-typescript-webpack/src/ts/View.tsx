@@ -1,7 +1,9 @@
 /// <reference path="../../typings/react/react.d.ts" />
+/// <reference path="../../typings/react-bootstrap/react-bootstrap.d.ts" />
 
 import * as React from 'react';
 import ElectronBrowserRpc from './ElectronBrowserRpc';
+import {Panel} from 'react-bootstrap';
 
 export default class View extends React.Component<any, any> {
   protected rpc:ElectronBrowserRpc;
@@ -18,6 +20,6 @@ export default class View extends React.Component<any, any> {
   }
 
   render() {
-    return <div>{this.state.text}</div>
+    return <Panel header="Example Panel" id="panel">{this.state.text}</Panel>
   }
 }
