@@ -1,14 +1,28 @@
-import ElectronBrowserRpc from './ElectronBrowserRpc';
-import EventConstant from './EventConstant';
+/// <reference path="../../typings/jquery/jquery.d.ts" />
+/// <reference path="../../typings/react/react.d.ts" />
+/// <reference path="../../typings/react/react-dom.d.ts" />
+
+import * as $ from 'jquery';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+
+import View from "./View";
 
 export default class ElectronBrowserApplication {
-  protected rpc:ElectronBrowserRpc;
+  protected element:React.ReactElement<{}>;
 
   constructor() {
+    var container:Element = document.getElementById("container");
+
     console.log("BrowserApplication starting up");
 
-    this.rpc = new ElectronBrowserRpc();
+    this.element = React.createElement(View);
+
+    ReactDOM.render(this.element, container);
   }
+
 }
 
-new ElectronBrowserApplication();
+$(document).ready(function() {
+  new ElectronBrowserApplication();
+});

@@ -3,6 +3,7 @@
     "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "jsx":"react",
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": false,
@@ -19,7 +20,8 @@
     "./src/ts/ElectronBrowserApplication.ts",
     "./src/ts/ElectronBrowserRpc.ts",
     "./src/ts/ElectronServerApplication.ts",
-    "./src/ts/ElectronServerRpc.ts"
+    "./src/ts/ElectronServerRpc.ts",
+    "./src/ts/View.tsx"
   ],
   "atom": {
     "rewriteTsconfig": false

@@ -15,10 +15,16 @@
       "commit": "fb2b3b1e068c9ff7d8f9b0851c08d37d96c95c38"
     },
     "react/react.d.ts": {
-      "commit": "1da639a106527e0c4010b354a1efe52a3059a291"
+      "commit": "83b84df662a4d48e886c988347275fe576990270"
     },
     "jquery/jquery.d.ts": {
       "commit": "1da639a106527e0c4010b354a1efe52a3059a291"
+    },
+    "react-bootstrap/react-bootstrap.d.ts": {
+      "commit": "d8dc4a2f0d3f577e94300e537051570177738991"
+    },
+    "react/react-dom.d.ts": {
+      "commit": "83b84df662a4d48e886c988347275fe576990270"
     }
   }
 }
