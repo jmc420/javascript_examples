@@ -39,10 +39,12 @@ export default class ElectronServerApplication {
     console.log("open window " + fileName);
     this.window = new BrowserWindow({ width: 800, height: 600, title: "WifiChat" });
     this.window.loadURL('file://' + fileName);
-    this.window.webContents.openDevTools();
+    //this.window.webContents.openDevTools();
     this.rpc = new ElectronServerRpc(this.window.webContents);
     this.window.webContents.on('did-finish-load', function() {
-      self.rpc.send("Message from server");
+      setTimeout(function() {
+        self.rpc.send("Message from server");
+      }, 1500);
     });
   }
 
