@@ -15,31 +15,30 @@ export default class ElectronServerApplication {
 
   constructor() {
     var self = this;
+    var fileName = "index.html";
 
     console.log("ElectronApplication starting up ");
 
-    if (process.argv.length != 3) {
-      console.log("script and index file expected");
+    if (process.argv.length == 3) {
+      fileName = path.resolve() + "/" + process.argv[2];
     }
-    else {
-      app.on('ready', function() {
-        self.openBrowser(process.argv[2]);
-      });
-      app.on('window-all-closed', function() {
-        self.quit();
-      });
-    }
+
+    app.on('ready', function() {
+      self.openBrowser(fileName);
+    });
+    app.on('window-all-closed', function() {
+      self.quit();
+    });
 
   }
 
-  private openBrowser(htmlFileName:string) {
-    var fileName:string = path.resolve() + "/" + htmlFileName;
+  private openBrowser(fileName:string) {
     var self = this;
 
     console.log("open window " + fileName);
-    this.window = new BrowserWindow({ width: 800, height: 600, title: "WifiChat" });
+    this.window = new BrowserWindow({ width: 800, height: 600, title: "Example" });
     this.window.loadURL('file://' + fileName);
-    //this.window.webContents.openDevTools();
+    this.window.webContents.openDevTools();
     this.rpc = new ElectronServerRpc(this.window.webContents);
     this.window.webContents.on('did-finish-load', function() {
       setTimeout(function() {

@@ -2,7 +2,7 @@ module.exports = {
     entry: "./src/js/ElectronServerApplication.js",
     output: {
         path: "./build",
-        filename: "server-bundle.js"
+        filename: "main.js"
     },
     target: "atom",
     module: {

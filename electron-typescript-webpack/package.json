@@ -22,8 +22,8 @@
   "scripts": {
     "all": "npm run compile && npm run build && npm run electron-package && npm run electron-build",
     "build": "npm run build-client && npm run build-server",
-    "build-client": "webpack -p --config webpack-client.config.js",
-    "build-server": "webpack -p --config webpack-server.config.js",
+    "build-client": "webpack --config webpack-client.config.js",
+    "build-server": "webpack --config webpack-server.config.js",
     "clean": "rm -fr ./node_modules ./src/js/* ./dist",
     "compile": "tsc",
     "electron-package": "rm -fr ./dist && npm run electron-osx-package",
@@ -32,9 +32,10 @@
     "electron-build": "npm run electron-build-osx",
     "electron-build-osx": "rm -f ./dist/osx/Example.dmg && electron-builder \"dist/osx/Example-darwin-x64/Example.app\" --platform=osx --out=\"dist/osx\" --config=electron-builder.json",
     "electron-build-win": "electron-builder \"dist/win/Example-win32\" --platform=win --out=\"dist/win\" --config=electron-builder.json",
+    "package": "cd ./build && npm run package",
     "postinstall": "tsd install && npm run compile && npm run build",
     "start": "./node_modules/.bin/electron ./src/js/ElectronServerApplication.js index.html",
-    "start-prod": "./node_modules/.bin/electron ./build/server-bundle.js ./build/index-bundle.html",
+    "start-prod": "./node_modules/.bin/electron ./build/main.js ./build/index.html",
     "test": "echo no tests"
   }
 }
