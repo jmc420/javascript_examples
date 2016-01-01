@@ -23,7 +23,7 @@
   "scripts": {
     "all": "npm run compile && npm run build && npm run electron-package && npm run electron-build",
     "build": "npm run build-client && npm run build-server",
-    "build-client": "webpack --config webpack-client.config.js && cp -rf ./src/css/* ./build/css",
+    "build-client": "webpack --config webpack-client.config.js && mkdir -p ./build/css && cp -rf ./src/css/* ./build/css",
     "build-server": "webpack --config webpack-server.config.js",
     "clean": "rm -fr ./node_modules ./src/js/* ./dist ./typings",
     "compile": "tsc",
