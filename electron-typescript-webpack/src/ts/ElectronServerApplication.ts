@@ -2,8 +2,11 @@
 /// <reference path="../../typings/node/node.d.ts" />
 /// <reference path="../../typings/github-electron/electron-prebuilt.d.ts" />
 /// <reference path="../../typings/github-electron/github-electron.d.ts" />
+/// <reference path="../../typings/loglevel/loglevel.d.ts" />
 
+import * as log from 'loglevel';
 import ElectronServerRpc from './ElectronServerRpc';
+import Logger from './Logger';
 
 var app = require('app');
 var path = require('path');
@@ -15,9 +18,10 @@ export default class ElectronServerApplication {
 
   constructor() {
     var self = this;
-    var fileName = "index.html";
+    var fileName = __dirname + "/"+ "index.html";
 
-    console.log("ElectronApplication starting up ");
+    Logger.initialise(log);
+    log.info("ElectronApplication starting up");
 
     if (process.argv.length == 3) {
       fileName = path.resolve() + "/" + process.argv[2];
@@ -35,10 +39,10 @@ export default class ElectronServerApplication {
   private openBrowser(fileName:string) {
     var self = this;
 
-    console.log("open window " + fileName);
+    log.info("open file " + fileName);
     this.window = new BrowserWindow({ width: 800, height: 600, title: "Example" });
     this.window.loadURL('file://' + fileName);
-    this.window.webContents.openDevTools();
+    //this.window.webContents.openDevTools();
     this.rpc = new ElectronServerRpc(this.window.webContents);
     this.window.webContents.on('did-finish-load', function() {
       setTimeout(function() {

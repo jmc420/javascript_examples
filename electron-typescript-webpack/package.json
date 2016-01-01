@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "dependencies": {
     "jquery": "^2.1.4",
+    "loglevel": "^1.4.0",
     "react": "^0.14.3",
     "react-bootstrap": "^0.28.1",
     "react-dom": "^0.14.3"
@@ -12,6 +13,7 @@
     "electron-builder": "^2.5.0",
     "electron-packager": "^5.2.0",
     "electron-prebuilt": "^0.35.1",
+    "json-loader": "^0.5.4",
     "tsd": "^0.6.5",
     "typescript": "1.7.5",
     "webpack": "^2.0.2-beta"
@@ -22,9 +24,9 @@
   "scripts": {
     "all": "npm run compile && npm run build && npm run electron-package && npm run electron-build",
     "build": "npm run build-client && npm run build-server",
-    "build-client": "webpack --config webpack-client.config.js",
+    "build-client": "webpack --config webpack-client.config.js && cp -rf ./src/css/* ./build/css",
     "build-server": "webpack --config webpack-server.config.js",
-    "clean": "rm -fr ./node_modules ./src/js/* ./dist",
+    "clean": "rm -fr ./node_modules ./src/js/* ./dist ./typings",
     "compile": "tsc",
     "electron-package": "rm -fr ./dist && npm run electron-osx-package",
     "electron-osx-package": "cd build && electron-packager . \"Example\" --out=../dist/osx --platform=darwin --arch=x64 --version=0.36.1",
@@ -32,7 +34,7 @@
     "electron-build": "npm run electron-build-osx",
     "electron-build-osx": "rm -f ./dist/osx/Example.dmg && electron-builder \"dist/osx/Example-darwin-x64/Example.app\" --platform=osx --out=\"dist/osx\" --config=electron-builder.json",
     "electron-build-win": "electron-builder \"dist/win/Example-win32\" --platform=win --out=\"dist/win\" --config=electron-builder.json",
-    "postinstall": "tsd install && npm run compile && npm run build",
+    "postinstall": "tsd install && npm run all",
     "start": "./node_modules/.bin/electron ./src/js/ElectronServerApplication.js index.html",
     "start-prod": "./node_modules/.bin/electron ./build/main.js ./build/index.html",
     "test": "echo no tests"

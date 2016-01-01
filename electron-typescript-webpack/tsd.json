@@ -25,6 +25,9 @@
     },
     "react/react-dom.d.ts": {
       "commit": "83b84df662a4d48e886c988347275fe576990270"
+    },
+    "loglevel/loglevel.d.ts": {
+      "commit": "fe563dff3428bac1260d1794e2c2ecf8f097535a"
     }
   }
 }

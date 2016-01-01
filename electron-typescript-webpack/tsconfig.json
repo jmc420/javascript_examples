@@ -21,6 +21,7 @@
     "./src/ts/ElectronBrowserRpc.ts",
     "./src/ts/ElectronServerApplication.ts",
     "./src/ts/ElectronServerRpc.ts",
+    "./src/ts/Logger.ts",
     "./src/ts/View.tsx"
   ],
   "atom": {
