@@ -8,7 +8,7 @@ The example shows how IPC works between the node server process and the browser 
 
 npm install.
 
-This should install and build everything.
+This installs and builds everything.
 
 ## compile, build and package everything
 
@@ -20,7 +20,7 @@ electron app (npm run build) and package it as an OSX dmg (npm run electron-pack
 npm run start compile will start electron with an index.html which loads the javascript as commonjs modules.
 
 Within electron both browser and main node process conveniently understand commonjs - no need to browserify or
-webpack the javascript to run the code.
+webpack the javascript to run the code within the browser.
 
 ## Run the bundled version
 
