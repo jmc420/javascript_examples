@@ -3,4 +3,8 @@ Code Examples
 
 1. angular2-typescript-systemjs example
 
-2. electron-typescript-webpack example
+See notes in sub directory.
+
+2. electron-react-typescript-webpack example
+
+See notes in sub directory.
