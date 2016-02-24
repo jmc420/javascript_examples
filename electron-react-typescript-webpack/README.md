@@ -10,10 +10,12 @@ npm install.
 
 This installs and builds everything.
 
-## compile, build and package everything
+## compile, package and build
 
-npm run all will compile (npm run compile), build webpack bundles (npm run build), build the webapp as an 
-electron app (npm run electron-build) and package it as an OSX dmg (npm run electron-package).
+npm run all will compile (npm run compile), build webpack bundles (npm run build), package the code up as an 
+electron app (npm run electron-package) and create an OSX dmg (npm run electron-build).
+
+[Electron packager](https://github.com/maxogden/electron-packager) and [Electron builder](https://github.com/loopline-systems/electron-builder) are the npm modules used to create the electron app.
 
 ## Run the unbundled version
 
