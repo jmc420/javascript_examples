@@ -13,7 +13,7 @@ This installs and builds everything.
 ## compile, build and package everything
 
 npm run all will compile (npm run compile), build webpack bundles (npm run build), build the webapp as an 
-electron app (npm run build) and package it as an OSX dmg (npm run electron-package).
+electron app (npm run electron-build) and package it as an OSX dmg (npm run electron-package).
 
 ## Run the unbundled version
 
