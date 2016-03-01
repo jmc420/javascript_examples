@@ -10,6 +10,7 @@
   "devDependencies": {
     "live-server": "0.8.2",
     "jspm": "0.16.15",
+    "tsd": "^0.6.5",
     "typescript": "1.7.3"
   },
   "engines": {
